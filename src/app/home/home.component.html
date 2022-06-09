@@ -1,0 +1,70 @@
+<ion-app>
+  <ion-content class="content">
+    <ion-card class="card">
+      <ion-card-content>
+        <h1>Create User</h1>
+        <form
+          [formGroup]="customerForm"
+          (submit)="customerFormSubmit()"
+          novalidate
+          class="form-group"
+        >
+          <ion-label class="label">Name</ion-label>
+          <ion-input
+            formControlName="name"
+            placeholder="Name"
+            name="name"
+            id="name"
+            required
+            class="input"
+          ></ion-input>
+
+          <ion-label>Last Name</ion-label>
+          <ion-input
+            formControlName="lastName"
+            placeholder="Last Name"
+            name="lastName"
+            id="lastName"
+            required
+            class="input"
+          ></ion-input>
+
+          <ion-label>Email</ion-label>
+          <ion-input
+            formControlName="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+            class="input"
+          ></ion-input>
+
+          <ion-label>Password</ion-label>
+          <ion-input
+            formControlName="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+            required
+            class="input"
+          ></ion-input>
+
+          <ion-label>Gender</ion-label>
+          <ion-select
+            placeholder="Select an option"
+            formControlName="gender"
+            class="input"
+          >
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
+            <ion-select-option value="other">Other</ion-select-option>
+          </ion-select>
+
+          <ion-button type="submit" (submit)="customerFormSubmit()"
+            >Create</ion-button
+          >
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,20 @@
+<main class="container">
+  <section class="card">
+    <h2>Login</h2>
+    <form
+      class="form-group"
+      [formGroup]="customerLoginForm"
+      (submit)="customerLogin()"
+    >
+      <label for="email">Email</label>
+      <input type="text" placeholder="Email" formControlName="email" />
+
+      <label for="password">Password</label>
+      <input type="text" placeholder="Password" formControlName="password" />
+
+      <button class="button-sign-in" type="submit" (submit)="customerLogin()">
+        Login
+      </button>
+    </form>
+  </section>
+</main>

@@ -8,6 +8,12 @@
     >
       <label for="name">Name</label>
       <input type="text" placeholder="Name" formControlName="name" id="name" />
+      <span
+        *ngIf="
+          customerForm.get('name').touched && customerForm.get('name').errors
+        "
+        >Place a valid name</span
+      >
 
       <label for="lastName">Last Name</label>
       <input
@@ -16,6 +22,13 @@
         formControlName="lastName"
         id="lastName"
       />
+      <span
+        *ngIf="
+          customerForm.get('lastName').touched &&
+          customerForm.get('lastName').errors
+        "
+        >Place a valid last name</span
+      >
 
       <label for="email">Email</label>
       <input
@@ -24,6 +37,12 @@
         formControlName="email"
         id="email"
       />
+      <span
+        *ngIf="
+          customerForm.get('email').touched && customerForm.get('email').errors
+        "
+        >Place a valid email</span
+      >
 
       <label for="password">Password</label>
       <input
@@ -32,11 +51,19 @@
         formControlName="password"
         id="password"
       />
+      <span
+        *ngIf="
+          customerForm.get('password').touched &&
+          customerForm.get('password').errors
+        "
+        >Place a valid password</span
+      >
 
       <button
         class="button-sign-in"
         type="submit"
         (submit)="customerFormSubmit()"
+        [disabled]="customerForm.invalid"
       >
         Create
       </button>

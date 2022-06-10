@@ -9,7 +9,8 @@
     border-radius: 0.5rem;
     margin-top: 3rem;
     width: 90%;
-    height: 80vh;
+    height: auto;
+    padding: 0.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -42,6 +43,11 @@
         margin-top: 0.3rem;
         color: #000;
         padding: 0.3rem;
+      }
+
+      span {
+        color: rgb(139, 12, 12);
+        font-size: 0.8rem;
       }
 
       .button-sign-in {
